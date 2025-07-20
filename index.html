@@ -22,44 +22,78 @@
     <p class="text-gray-300 text-lg">I'm a Computer Systems Engineering student at UET Peshawar with a strong interest in embedded systems, AI, and full-stack development. I've built everything from robots to games using ESP32, Python, C++, SFML, and more. I love solving real-world problems through code and hardware.</p>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-16 px-6 bg-gray-800">
-    <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-      <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold">Soccer Robot (ESP32)</h3>
-        <p class="text-gray-300 mt-2">A Bluetooth-controlled soccer robot using ESP32, L298N and motor drivers. Controlled via Android app.</p>
-        <video class="w-full mt-4 rounded" controls>
-          <source src="videos/soccer_bot.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold">Dream Team Analyzer</h3>
-        <p class="text-gray-300 mt-2">A Python & Flask-based tool that analyzes user football teams with Claude AI and Wikipedia integration.</p>
-        <video class="w-full mt-4 rounded" controls>
-          <source src="videos/dream_team_analyzer.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold">SFML Arkanoid Game</h3>
-        <p class="text-gray-300 mt-2">An object-oriented SFML-based Arkanoid game with collisions, scoring, and paddle control — built for OOP Lab.</p>
-        <video class="w-full mt-4 rounded" controls>
-          <source src="videos/arknoid_demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
-        <h3 class="text-xl font-semibold">SFML Music Player with Playlist Queue</h3>
-        <p class="text-gray-300 mt-2">Built using C and CSFML, this desktop music player allows adding, queuing, and playing songs with UI support for playlists.</p>
-        <video class="w-full mt-4 rounded" controls>
-          <source src="videos/music_player.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+<!-- Projects Section -->
+<section id="projects" class="py-16 px-6 bg-gray-800">
+  <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+  <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+    <!-- Soccer Robot -->
+    <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+      <h3 class="text-xl font-semibold">Soccer Robot (ESP32)</h3>
+      <p class="text-gray-300 mt-2">
+        A remotely controlled soccer-playing robot built using ESP32 and Bluetooth communication. The bot features two-wheel drive controlled via L298N motor drivers and is maneuvered using a custom Android app.
+        <br><br>
+        <strong>Role:</strong> Designed and assembled the hardware, implemented ESP32 firmware using C++, and developed the mobile controller interface.<br>
+        <strong>Technologies:</strong> ESP32, Arduino IDE, HC-05 Bluetooth module, L298N.<br>
+        <strong>Outcome:</strong> Successfully demonstrated real-time directional control and responsive movement in indoor robot soccer challenges.
+      </p>
+      <video class="w-full mt-4 rounded" controls>
+        <source src="videos/soccer_bot.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-  </section>
+
+    <!-- Dream Team Analyzer -->
+    <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+      <h3 class="text-xl font-semibold">Dream Team Analyzer</h3>
+      <p class="text-gray-300 mt-2">
+        A Flask-based web application that uses AI and web scraping to analyze football teams. It compares player stats and histories using Claude AI and data pulled from Wikipedia.
+        <br><br>
+        <strong>Role:</strong> Developed the backend with Flask and integrated Claude AI via API to handle natural language analysis.<br>
+        <strong>Technologies:</strong> Python, Flask, JavaScript, Claude AI API, HTML/CSS<br>
+        <strong>Outcome:</strong> Allowed users to submit a lineup and receive detailed feedback about team balance, strengths, and trivia.
+      </p>
+      <video class="w-full mt-4 rounded" controls>
+        <source src="videos/dream_team_analyzer.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Arkanoid Game -->
+    <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+      <h3 class="text-xl font-semibold">SFML Arkanoid Game</h3>
+      <p class="text-gray-300 mt-2">
+        A modern re-creation of the classic Arkanoid game developed using SFML and object-oriented programming. Features smooth paddle mechanics, collision detection, and scoring logic.
+        <br><br>
+        <strong>Role:</strong> Designed game engine structure and collision system; implemented using clean class-based architecture.<br>
+        <strong>Technologies:</strong> C++, SFML, OOP principles<br>
+        <strong>Outcome:</strong> Successfully deployed as a semester project with complete gameplay, multiple levels, and game-over handling.
+      </p>
+      <video class="w-full mt-4 rounded" controls>
+        <source src="videos/arknoid_demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Music Player -->
+    <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+      <h3 class="text-xl font-semibold">SFML Music Player with Playlist Queue</h3>
+      <p class="text-gray-300 mt-2">
+        A lightweight desktop music player built using C and CSFML. It allows users to add songs, queue tracks, and manage playlists with a minimalistic user interface.
+        <br><br>
+        <strong>Role:</strong> Developed entire application from scratch, including audio buffering, file browsing, and queue logic.<br>
+        <strong>Technologies:</strong> C, CSFML (Simple Fast Multimedia Library), Data Structures<br>
+        <strong>Outcome:</strong> Produced a responsive player with smooth transitions and real-time playlist updates, usable across platforms.
+      </p>
+      <video class="w-full mt-4 rounded" controls>
+        <source src="videos/music_player.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Skills Section -->
   <section id="skills" class="py-16 px-6 max-w-4xl mx-auto">
