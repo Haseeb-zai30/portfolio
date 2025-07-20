@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M. Haseeb | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Muhammad Haseeb</h1>
+    <p class="text-xl text-gray-300 mb-6">Computer Systems Engineer | Embedded & Software Developer</p>
+    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-white">Get In Touch</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p class="text-gray-300 text-lg">I'm a Computer Systems Engineering student at UET Peshawar with a strong interest in embedded systems, AI, and full-stack development. I've built everything from robots to games using ESP32, Python, C++, SFML, and more. I love solving real-world problems through code and hardware.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 px-6 bg-gray-800">
+    <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold">Soccer Robot (ESP32)</h3>
+        <p class="text-gray-300 mt-2">A Bluetooth-controlled soccer robot using ESP32, L298N and motor drivers. Controlled via Android app.</p>
+        <video class="w-full mt-4 rounded" controls>
+          <source src="videos/soccer_bot.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold">Dream Team Analyzer</h3>
+        <p class="text-gray-300 mt-2">A Python & Flask-based tool that analyzes user football teams with Claude AI and Wikipedia integration.</p>
+        <video class="w-full mt-4 rounded" controls>
+          <source src="videos/dream_team_analyzer.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold">SFML Arkanoid Game</h3>
+        <p class="text-gray-300 mt-2">An object-oriented SFML-based Arkanoid game with collisions, scoring, and paddle control — built for OOP Lab.</p>
+        <video class="w-full mt-4 rounded" controls>
+          <source src="videos/arknoid_demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold">SFML Music Player with Playlist Queue</h3>
+        <p class="text-gray-300 mt-2">Built using C and CSFML, this desktop music player allows adding, queuing, and playing songs with UI support for playlists.</p>
+        <video class="w-full mt-4 rounded" controls>
+          <source src="videos/music_player.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Skills</h2>
+    <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-300">
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>ESP32 / Embedded</li>
+       <li>Raspbarry Pie</li>
+       <li>Documentation</li>
+      <li>SFML / Game Dev</li>
+      <li>HTML/CSS/JS</li>
+      <li>Flask</li>
+      <li>OpenCV</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="py-16 px-6 bg-gray-800 text-center">
+    <h2 class="text-3xl font-bold mb-4">Resume</h2>
+    <a href="resume.pdf" target="_blank" class="underline text-blue-400">Download My Resume (PDF)</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 max-w-xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+    <p class="text-gray-300 mb-6">Want to work together or ask something? Drop a message below or connect on socials.</p>
+    <div class="flex justify-center gap-6 text-xl">
+      <a href="mailto:mohdhaseb2004@gmail.com" class="hover:text-blue-400"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/muhammad-haseeb-01a121344/" target="_blank" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Haseeb-zai30" target="_blank" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    © 2025 Muhammad Haseeb. All rights reserved.
+  </footer>
+
+</body>
+</html>
