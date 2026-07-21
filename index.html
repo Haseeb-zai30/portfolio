@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Muhammad Haseeb — AI &amp; Systems Engineer</title>
+<meta name="description" content="Muhammad Haseeb — AI Engineer, Full Stack Developer &amp; Embedded Systems Engineer. Building AI systems, full-stack applications, FPGA and embedded hardware, and data analytics solutions." />
+<meta name="theme-color" content="#060810" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Muhammad Haseeb — AI &amp; Systems Engineer" />
+<meta property="og:description" content="AI Engineer · Full Stack Developer · Embedded Systems Engineer — portfolio of projects spanning AI, web, FPGA and embedded hardware." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="images/profile.jpg" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          ink: { 950: '#060810', 900: '#0A0D17', 800: '#0F1220' },
+          surface: { DEFAULT: '#11141F', border: 'rgba(255,255,255,0.08)' },
+          accent: { DEFAULT: '#5B8CFF', dim: '#3E5FBF' },
+          amber: { DEFAULT: '#FFB86B', dim: '#C98A46' },
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['"Inter"', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-ink-950 text-slate-200 font-body antialiased selection:bg-accent/30 selection:text-white">
+
+<!-- ================= NAV ================= -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <nav class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="glass-nav mt-4 rounded-2xl flex items-center justify-between px-5 py-3">
+      <a href="#home" class="font-mono text-sm text-slate-200 hover:text-accent transition-colors" aria-label="Muhammad Haseeb — home">
+        <span class="text-accent">~</span>haseeb<span class="text-amber">.dev</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-wider text-slate-400">
+        <li><a href="#about" class="nav-link hover:text-white transition-colors">About</a></li>
+        <li><a href="#projects" class="nav-link hover:text-white transition-colors">Projects</a></li>
+        <li><a href="#skills" class="nav-link hover:text-white transition-colors">Skills</a></li>
+        <li><a href="#timeline" class="nav-link hover:text-white transition-colors">Journey</a></li>
+        <li><a href="#certifications" class="nav-link hover:text-white transition-colors">Certs</a></li>
+        <li><a href="#contact" class="nav-link hover:text-white transition-colors">Contact</a></li>
+      </ul>
+
+      <div class="hidden md:block">
+        <a href="docs/Muhammad_Haseeb_Resume.pdf" target="_blank" rel="noopener"
+           class="btn-outline text-xs font-mono px-4 py-2 rounded-full">Resume</a>
+      </div>
+
+      <button id="menu-toggle" class="md:hidden text-slate-200 p-2" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden glass-nav mt-2 rounded-2xl px-6 py-5 flex flex-col gap-4 font-mono text-sm uppercase tracking-wider text-slate-300">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#timeline" class="mobile-link">Journey</a>
+      <a href="#certifications" class="mobile-link">Certs</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="docs/Muhammad_Haseeb_Resume.pdf" target="_blank" rel="noopener" class="btn-outline text-center px-4 py-2 rounded-full mt-1">Resume</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20 lg:pt-24">
+
+  <!-- ambient backdrop -->
+  <div class="absolute inset-0 -z-10 grid-overlay"></div>
+  <div class="absolute inset-0 -z-10 spotlight" id="spotlight"></div>
+  <canvas id="particles" class="absolute inset-0 -z-10 opacity-60" aria-hidden="true"></canvas>
+  <div class="blob blob-a" aria-hidden="true"></div>
+  <div class="blob blob-b" aria-hidden="true"></div>
+
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center w-full">
+
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 font-mono text-[11px] tracking-wide text-slate-300 mb-7">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+        </span>
+        Open to internships &amp; research collaborations
+      </div>
+
+      <h1 class="font-display font-700 leading-[1.02] tracking-tight text-5xl sm:text-6xl lg:text-7xl">
+        <span class="block text-slate-100">Muhammad</span>
+        <span class="block text-gradient">Haseeb</span>
+      </h1>
+
+      <div class="mt-6 h-8 flex items-center font-mono text-lg sm:text-xl text-accent">
+        <span aria-hidden="true">&gt;&nbsp;</span><span id="typed-role"></span><span class="typed-cursor" aria-hidden="true">|</span>
+      </div>
+
+      <p class="mt-6 max-w-xl text-slate-400 text-base sm:text-lg leading-relaxed">
+        I design and build AI-driven systems, full-stack web applications, and embedded/FPGA hardware —
+        turning ideas into products that run reliably from the silicon up to the interface.
+        Currently a Computer Systems Engineering student at UET Peshawar, exploring the intersection
+        of intelligent software and real hardware.
+      </p>
+
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="#projects" class="btn-primary rounded-full px-6 py-3 text-sm font-semibold">View Projects</a>
+        <a href="#contact" class="btn-outline rounded-full px-6 py-3 text-sm font-semibold">Contact Me</a>
+        <div class="flex items-center gap-2 ml-1">
+          <a href="https://github.com/Haseeb-zai30" target="_blank" rel="noopener" aria-label="GitHub profile" class="icon-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.77 10.79.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.16.69-3.83-1.34-3.83-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.66 1.23 3.31.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.16.91-.25 1.89-.38 2.86-.39.97.01 1.95.14 2.86.39 2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.35.77 1.04.77 2.11 0 1.52-.01 2.75-.01 3.12 0 .3.2.66.79.55A11.53 11.53 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/muhammad-haseeb-01a121344/" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="icon-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-xs text-slate-400 border-t border-white/8 pt-6">
+        <span><span class="text-white font-medium">12+</span> Certifications</span>
+        <span class="text-white/15">•</span>
+        <span><span class="text-white font-medium">8+</span> Projects</span>
+        <span class="text-white/15">•</span>
+        <span>AI <span class="text-amber">+</span> Embedded <span class="text-amber">+</span> Data Analytics</span>
+      </div>
+    </div>
+
+    <!-- signature circuit/node graphic -->
+    <div class="reveal relative hidden lg:block" style="transition-delay:120ms">
+      <div class="relative mx-auto w-full max-w-md aspect-square">
+        <div class="absolute inset-0 rounded-full node-ring"></div>
+        <svg viewBox="0 0 400 400" class="absolute inset-0 w-full h-full" aria-hidden="true">
+          <g stroke="url(#traceGrad)" stroke-width="1.4" fill="none" opacity="0.55">
+            <path class="trace" d="M200 200 L200 60" />
+            <path class="trace" d="M200 200 L330 130" />
+            <path class="trace" d="M200 200 L340 260" />
+            <path class="trace" d="M200 200 L200 345" />
+            <path class="trace" d="M200 200 L65 265" />
+            <path class="trace" d="M200 200 L60 135" />
+          </g>
+          <defs>
+            <linearGradient id="traceGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5B8CFF" />
+              <stop offset="1" stop-color="#FFB86B" />
+            </linearGradient>
+          </defs>
+          <circle cx="200" cy="200" r="46" fill="#0F1220" stroke="#5B8CFF" stroke-width="1.5" />
+          <text x="200" y="196" text-anchor="middle" class="fill-slate-200 font-mono" font-size="11">MH</text>
+          <text x="200" y="211" text-anchor="middle" class="fill-slate-500 font-mono" font-size="8">core</text>
+
+          <g class="node-dot" data-label="AI/ML"><circle cx="200" cy="60" r="26" fill="#0F1220" stroke="#5B8CFF" stroke-width="1.4" /><text x="200" y="64" text-anchor="middle" class="fill-slate-300 font-mono" font-size="8.5">AI/ML</text></g>
+          <g class="node-dot" data-label="Full Stack"><circle cx="330" cy="130" r="26" fill="#0F1220" stroke="#FFB86B" stroke-width="1.4" /><text x="330" y="134" text-anchor="middle" class="fill-slate-300 font-mono" font-size="8">Web</text></g>
+          <g class="node-dot" data-label="Analytics"><circle cx="340" cy="260" r="26" fill="#0F1220" stroke="#5B8CFF" stroke-width="1.4" /><text x="340" y="264" text-anchor="middle" class="fill-slate-300 font-mono" font-size="8">Data</text></g>
+          <g class="node-dot" data-label="Embedded"><circle cx="200" cy="345" r="26" fill="#0F1220" stroke="#FFB86B" stroke-width="1.4" /><text x="200" y="349" text-anchor="middle" class="fill-slate-300 font-mono" font-size="7.5">Embedded</text></g>
+          <g class="node-dot" data-label="FPGA"><circle cx="65" cy="265" r="26" fill="#0F1220" stroke="#5B8CFF" stroke-width="1.4" /><text x="65" y="269" text-anchor="middle" class="fill-slate-300 font-mono" font-size="9">FPGA</text></g>
+          <g class="node-dot" data-label="LLMs"><circle cx="60" cy="135" r="26" fill="#0F1220" stroke="#FFB86B" stroke-width="1.4" /><text x="60" y="139" text-anchor="middle" class="fill-slate-300 font-mono" font-size="9">LLMs</text></g>
+
+          <circle class="pulse-dot" r="3.2" fill="#FFB86B"><animateMotion dur="4s" repeatCount="indefinite" path="M200 200 L200 60" /></circle>
+          <circle class="pulse-dot" r="3.2" fill="#5B8CFF"><animateMotion dur="5s" repeatCount="indefinite" path="M200 200 L330 130" /></circle>
+          <circle class="pulse-dot" r="3.2" fill="#FFB86B"><animateMotion dur="4.6s" repeatCount="indefinite" path="M200 200 L340 260" /></circle>
+          <circle class="pulse-dot" r="3.2" fill="#5B8CFF"><animateMotion dur="5.4s" repeatCount="indefinite" path="M200 200 L200 345" /></circle>
+          <circle class="pulse-dot" r="3.2" fill="#FFB86B"><animateMotion dur="4.2s" repeatCount="indefinite" path="M200 200 L65 265" /></circle>
+          <circle class="pulse-dot" r="3.2" fill="#5B8CFF"><animateMotion dur="4.9s" repeatCount="indefinite" path="M200 200 L60 135" /></circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+    <span></span>
+  </a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="relative py-28 border-t border-white/6">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 grid lg:grid-cols-[0.9fr_1.1fr] gap-14 items-start">
+
+    <div class="reveal">
+      <p class="eyebrow">01 · About</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-600 text-slate-100 mt-2 leading-tight">
+        Systems thinker, <span class="text-gradient">across the stack.</span>
+      </h2>
+      <p class="mt-6 text-slate-400 leading-relaxed">
+        I'm a Computer Systems Engineering student at UET Peshawar, working at the point where
+        software intelligence meets physical hardware. I've shipped machine-learning tools, production
+        web platforms, and firmware that talks directly to registers and buses — because the most
+        interesting problems rarely stay inside one layer of the stack.
+      </p>
+      <p class="mt-4 text-slate-400 leading-relaxed">
+        My approach is deliberate: clean architecture, measured performance, and code that a
+        teammate can pick up without a walkthrough. I learn by building — an AI prompt platform one
+        month, a VGA-rendered game on FPGA silicon the next.
+      </p>
+
+      <div class="mt-8 flex items-center gap-4 rounded-2xl glass-card p-4">
+        <img src="images/profile.jpg" alt="Portrait of Muhammad Haseeb" width="56" height="56"
+             class="h-14 w-14 rounded-xl object-cover border border-white/10" loading="eager"
+             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2256%22 height=%2256%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23151a2c%22/><text x=%2250%25%22 y=%2258%25%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%235B8CFF%22 text-anchor=%22middle%22>MH</text></svg>'" />
+        <div class="font-mono text-xs text-slate-400 leading-relaxed">
+          <span class="text-slate-200">UET Peshawar</span> · Computer Systems Engineering<br />
+          Class of 2027 · CGPA 3.64/4.0
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal grid grid-cols-2 sm:grid-cols-3 gap-4" style="transition-delay:100ms">
+      <!-- capability grid -->
+      <div class="capability-card"><span class="cap-icon">◆</span><p>AI Systems</p></div>
+      <div class="capability-card"><span class="cap-icon">◇</span><p>Software Engineering</p></div>
+      <div class="capability-card"><span class="cap-icon">▣</span><p>Embedded Systems</p></div>
+      <div class="capability-card"><span class="cap-icon">⌁</span><p>Problem Solving</p></div>
+      <div class="capability-card"><span class="cap-icon">▤</span><p>Data Engineering</p></div>
+      <div class="capability-card"><span class="cap-icon">✦</span><p>LLMs</p></div>
+      <div class="capability-card"><span class="cap-icon">▦</span><p>FPGA Design</p></div>
+      <div class="capability-card"><span class="cap-icon">↻</span><p>Continuous Learning</p></div>
+      <div class="capability-card"><span class="cap-icon">◈</span><p>Full-Stack Delivery</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="relative py-28 border-t border-white/6 bg-ink-900/40">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="reveal flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
+      <div>
+        <p class="eyebrow">02 · Selected Work</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-600 text-slate-100 mt-2">Featured Projects</h2>
+      </div>
+      <div id="filters" class="flex flex-wrap gap-2 font-mono text-xs" role="group" aria-label="Filter projects by category">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="ai">AI</button>
+        <button class="filter-chip" data-filter="fullstack">Full Stack</button>
+        <button class="filter-chip" data-filter="embedded">Embedded</button>
+        <button class="filter-chip" data-filter="fpga">FPGA</button>
+        <button class="filter-chip" data-filter="analytics">Analytics</button>
+        <button class="filter-chip" data-filter="desktop">Desktop</button>
+      </div>
+    </div>
+
+    <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="relative py-28 border-t border-white/6">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="reveal mb-12">
+      <p class="eyebrow">03 · Toolkit</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-600 text-slate-100 mt-2">Technical Skills</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <div class="skill-card reveal">
+        <h3><span class="skill-icon">01</span>Programming</h3>
+        <div class="chips"><span>Python</span><span>C++</span><span>C</span><span>JavaScript</span><span>PHP</span></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:60ms">
+        <h3><span class="skill-icon">02</span>Web &amp; Backend</h3>
+        <div class="chips"><span>Laravel</span><span>Flask</span><span>Bootstrap</span><span>REST APIs</span></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:120ms">
+        <h3><span class="skill-icon">03</span>AI &amp; ML</h3>
+        <div class="chips"><span>Machine Learning</span><span>Prompt Engineering</span><span>LLMs</span><span>OpenRouter</span><span>Scikit-learn</span></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:180ms">
+        <h3><span class="skill-icon">04</span>Data &amp; Analytics</h3>
+        <div class="chips"><span>SQL</span><span>Power BI</span><span>Pandas</span><span>MySQL</span></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:240ms">
+        <h3><span class="skill-icon">05</span>Embedded Systems</h3>
+        <div class="chips"><span>Embedded C</span><span>ESP32</span><span>MSP430</span><span>FPGA</span><span>Verilog</span><span>UART</span></div>
+      </div>
+
+      <div class="skill-card reveal" style="transition-delay:300ms">
+        <h3><span class="skill-icon">06</span>Tooling</h3>
+        <div class="chips"><span>Git</span><span>Linux</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIMELINE ================= -->
+<section id="timeline" class="relative py-28 border-t border-white/6 bg-ink-900/40">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
+    <div class="reveal mb-14">
+      <p class="eyebrow">04 · Journey</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-600 text-slate-100 mt-2">Education &amp; Experience</h2>
+    </div>
+
+    <ol class="timeline-list">
+      <li class="reveal timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <p class="timeline-badge">Jun 2025 — Sep 2025</p>
+          <h3 class="timeline-title">AI Intern, MLSA UET Peshawar</h3>
+          <p class="timeline-copy">Developed machine learning models for predictive analysis and collaborated on academic AI research and workshops.</p>
+          <a href="docs/MLSA AI internship.pdf" target="_blank" rel="noopener" class="timeline-link">View certificate →</a>
+        </div>
+      </li>
+
+      <li class="reveal timeline-item" style="transition-delay:80ms">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <p class="timeline-badge">Jan 2026 — Mar 2026</p>
+          <h3 class="timeline-title">Data Analytics Intern, Elevvo</h3>
+          <ul class="timeline-bullets">
+            <li>Processed and analyzed datasets to identify trends, patterns, and performance metrics, developing SQL queries and reports to support business decision-making.</li>
+            <li>Performed data validation, cleaning, and transformation to improve data quality.</li>
+            <li>Collaborated with cross-functional teams to deliver analytical insights and reporting solutions.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="reveal timeline-item" style="transition-delay:160ms">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <p class="timeline-badge">2024</p>
+          <h3 class="timeline-title">Graphic Design Intern, Cycarts</h3>
+          <p class="timeline-copy">Contributed to visual branding, educational assets, and user-centric design layouts for digital platforms.</p>
+          <a href="docs/Internship Completion Letter.pdf" target="_blank" rel="noopener" class="timeline-link">View certificate →</a>
+        </div>
+      </li>
+
+      <li class="reveal timeline-item" style="transition-delay:220ms">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <p class="timeline-badge">2023 — 2027</p>
+          <h3 class="timeline-title">BSc Computer Systems Engineering, UET Peshawar</h3>
+          <p class="timeline-copy">Coursework spanning embedded systems, digital logic, data structures, operating systems, and AI — currently maintaining a 3.64/4.0 CGPA.</p>
+        </div>
+      </li>
+
+      <li class="reveal timeline-item" style="transition-delay:280ms">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <p class="timeline-badge">Ongoing</p>
+          <h3 class="timeline-title">Independent Projects</h3>
+          <p class="timeline-copy">Building across domains — an AI prompt management platform, an FPGA-based arcade game in Verilog, embedded firmware on MSP430/ESP32, and full-stack web systems.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications" class="relative py-28 border-t border-white/6">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="reveal mb-12">
+      <p class="eyebrow">05 · Credentials</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-600 text-slate-100 mt-2">Certifications</h2>
+    </div>
+
+    <div id="cert-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="relative py-32 border-t border-white/6 overflow-hidden">
+  <div class="blob blob-c" aria-hidden="true"></div>
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center reveal">
+    <p class="eyebrow justify-center">06 · Get in touch</p>
+    <h2 class="font-display text-4xl sm:text-5xl font-700 text-slate-100 mt-3 leading-tight">
+      Let's Build Something<br /><span class="text-gradient">Amazing.</span>
+    </h2>
+    <p class="mt-6 text-slate-400 max-w-lg mx-auto">
+      I'm currently looking for internship opportunities and research collaborations in AI and embedded systems.
+      Reach out — I reply fast.
+    </p>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <a href="mailto:mohdhaseb2004@gmail.com" class="btn-primary rounded-full px-6 py-3 text-sm font-semibold">Email Me</a>
+      <a href="https://github.com/Haseeb-zai30" target="_blank" rel="noopener" class="btn-outline rounded-full px-6 py-3 text-sm font-semibold">GitHub</a>
+      <a href="https://linkedin.com/in/muhammad-haseeb-01a121344/" target="_blank" rel="noopener" class="btn-outline rounded-full px-6 py-3 text-sm font-semibold">LinkedIn</a>
+      <a href="docs/Muhammad_Haseeb_Resume.pdf" target="_blank" rel="noopener" class="btn-outline rounded-full px-6 py-3 text-sm font-semibold">Resume</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-white/6 py-8">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs text-slate-500">
+    <p>© 2026 Muhammad Haseeb. Engineered with intent.</p>
+    <p class="flex items-center gap-1"><span class="text-emerald-400">●</span> Available for work</p>
+  </div>
+</footer>
+
+<!-- ================= VIDEO MODAL ================= -->
+<div id="video-modal" class="video-modal hidden" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+  <div class="video-modal-panel">
+    <div class="flex items-center justify-between px-5 py-4 border-b border-white/8">
+      <p id="video-modal-title" class="font-display text-sm text-slate-200"></p>
+      <button id="video-modal-close" type="button" aria-label="Close video" class="icon-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <div class="relative aspect-video bg-black">
+      <video id="video-modal-player" class="w-full h-full" controls playsinline></video>
+      <p id="video-modal-error" class="hidden absolute inset-0 flex items-center justify-center text-center px-8 font-mono text-xs text-slate-500">
+        Demo video coming soon — check back shortly.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
