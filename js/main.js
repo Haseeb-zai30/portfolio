@@ -151,15 +151,12 @@ PROJECTS.forEach((p) => {
    Data: Certifications
 ----------------------------------------------------- */
 const CERTS = [
-  { title: 'Python for Data Science', issuer: 'IBM', href: 'docs/python_datascience.pdf' },
-  { title: 'Machine Learning with Python', issuer: 'IBM', href: 'docs/ml_with_python.pdf' },
-  { title: 'Python with AI Mastery', issuer: 'Hadi e-Learning', href: 'docs/python_ai_mastery.pdf' },
+  { title: 'AWS AI Practitioner Challenge', issuer: 'Udacity', href: 'docs/AWS AI Practitioner.pdf' },
   { title: 'Generative AI Web App Development', issuer: 'Pak Angels / HEC', href: 'docs/gen AI PAK angels.pdf' },
   { title: 'Data Analytics & Business Intelligence', issuer: 'DigiSkills Training', href: 'docs/digi skills data analytics.pdf' },
   { title: 'Introduction to Internet of Things', issuer: 'Coursera', href: 'docs/intro to IOT.pdf' },
-  { title: 'Big Data Foundations', issuer: 'IBM', href: 'docs/big_data_foundations.pdf' },
+  { title: 'Artificial Intelligence using Python ', issuer: 'DigiSkills Training', href: 'docs/digi skills AI with py.pdf' },
   { title: 'Art of Prompting', issuer: 'IBM', href: 'docs/prompting.pdf' },
-  { title: 'AI for Everyone', issuer: 'Coursera', href: 'docs/AI for everyone.pdf' },
   { title: 'Graphic Designing Mastery', issuer: 'Hadi e-Learning', href: 'docs/graphic designing mastery.pdf' },
 ];
 
