@@ -339,6 +339,7 @@ body::before {
   border-radius: 18px;
   padding: 1px;
   background: linear-gradient(135deg, rgba(0, 245, 255, 0.6), rgba(157, 78, 221, 0.5), rgba(255, 158, 0, 0.5));
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
