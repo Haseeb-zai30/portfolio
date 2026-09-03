@@ -22,6 +22,19 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 ----------------------------------------------------- */
 const PROJECTS = [
   {
+    slug: 'edge-ai-fridge',
+    title: 'Edge AI Refrigerator Telemetry System',
+    subtitle: 'Edge AI + IoT + TinyML',
+    description: 'An end-to-end Edge AI system that monitors refrigerator conditions using an ESP32, collects temperature, humidity, and illumination data, and uses an Edge Impulse model to identify abnormal conditions such as unusual temperature changes or possible door-open events. The pipeline connects sensor data collection, feature extraction, ML model training, and real-time inference on the ESP32 with a web dashboard for monitoring.',
+    features: ['ESP32 + DHT22 + LDR simulation', 'Edge Impulse ML pipeline', 'Time-series data collection', 'Feature extraction', 'Neural network training (2-class classification)', 'C++ inference code generation', 'Real-time sensor acquisition', 'CSV logging', 'JSON data transmission over Wi-Fi', 'Web dashboard with real-time monitoring', 'Anomaly detection with confidence scoring', 'Simulation in Wokwi'],
+    tech: ['ESP32', 'DHT22', 'LDR', 'Edge Impulse', 'TinyML', 'Wokwi', 'C++', 'JSON', 'Wi-Fi', 'Web Dashboard'],
+    categories: ['embedded', 'ai'],
+    difficulty: 'Advanced',
+    date: '2025',
+    monogram: 'EDGE',
+    github: '',
+  },
+  {
     slug: 'synprompt',
     title: 'SynPrompt',
     subtitle: 'Centralized AI Prompt Repository',
@@ -130,6 +143,7 @@ const PROJECTS = [
 /* Every project gets matching asset paths derived from its slug,
    with explicit overrides for the files that exist in this workspace. */
 const PROJECT_ASSET_MAP = {
+  'edge-ai-fridge': { image: 'Refrigerator_Telemetry_pic.jfif', doc: '', video: '' },
   synprompt: { image: 'images/synprompt.PNG', doc: 'docs/synprompt.pdf', video: 'videos/synprompt.mp4' },
   'mentalhealth-db': { image: 'images/mental.PNG', doc: 'docs/mentalhealth-db.pdf', video: 'videos/mentalhealth-db.mp4' },
   'dream-team-analyzer': { image: 'images/dream team analyzer.PNG', doc: 'docs/dream-team-analyzer.pdf', video: 'videos/dream-team-analyzer.mp4' },
@@ -151,11 +165,15 @@ PROJECTS.forEach((p) => {
    Data: Certifications
 ----------------------------------------------------- */
 const CERTS = [
+  { title: 'IOT Specialization Certificate', issuer: 'UC Irvine (Coursera)', href: 'docs/IOT_specializaton_Certificate.pdf' },
   { title: 'AWS AI Practitioner Challenge', issuer: 'Udacity', href: 'docs/AWS AI Practitioner.pdf' },
+  { title: 'Python for Data Science', issuer: 'IBM', href: 'docs/python_datascience.pdf' },
+  { title: 'Machine Learning with Python', issuer: 'IBM', href: 'docs/ml_with_python.pdf' },
+  { title: 'Python with AI Mastery', issuer: 'Hadi e-Learning', href: 'docs/python_ai_mastery.pdf' },
   { title: 'Generative AI Web App Development', issuer: 'Pak Angels / HEC', href: 'docs/gen AI PAK angels.pdf' },
   { title: 'Data Analytics & Business Intelligence', issuer: 'DigiSkills Training', href: 'docs/digi skills data analytics.pdf' },
   { title: 'Introduction to Internet of Things', issuer: 'Coursera', href: 'docs/intro to IOT.pdf' },
-  { title: 'Artificial Intelligence using Python ', issuer: 'DigiSkills Training', href: 'docs/digi skills AI with py.pdf' },
+  { title: 'Artificial Intelligence using Python', issuer: 'DigiSkills Training', href: 'docs/digi skills AI with py.pdf' },
   { title: 'Art of Prompting', issuer: 'IBM', href: 'docs/prompting.pdf' },
   { title: 'Graphic Designing Mastery', issuer: 'Hadi e-Learning', href: 'docs/graphic designing mastery.pdf' },
 ];
