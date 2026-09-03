@@ -143,7 +143,7 @@ const PROJECTS = [
 /* Every project gets matching asset paths derived from its slug,
    with explicit overrides for the files that exist in this workspace. */
 const PROJECT_ASSET_MAP = {
-  'edge-ai-fridge': { image: 'Refrigerator_Telemetry_pic.png', doc: '', video: '' },
+  'edge-ai-fridge': { image: 'images/Refrigerator_Telemetry_pic.png', doc: '', video: '' },
   synprompt: { image: 'images/synprompt.PNG', doc: 'docs/synprompt.pdf', video: 'videos/synprompt.mp4' },
   'mentalhealth-db': { image: 'images/mental.PNG', doc: 'docs/mentalhealth-db.pdf', video: 'videos/mentalhealth-db.mp4' },
   'dream-team-analyzer': { image: 'images/dream team analyzer.PNG', doc: 'docs/dream-team-analyzer.pdf', video: 'videos/dream-team-analyzer.mp4' },
